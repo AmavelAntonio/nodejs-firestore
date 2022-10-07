@@ -1,10 +1,9 @@
 const express = require('express');
+const {Categories} = require('../controllers/categoriesController')
 
 const router = express.Router()
 
 
-router.get('/', (require, response) => {
-    response.status(200).send("HELLO")
-})
+router.get('/create', Categories.CreateCategories);
 
 module.exports = {router};
